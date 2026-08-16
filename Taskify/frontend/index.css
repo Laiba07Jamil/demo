@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+/* ---------- Auth pages ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 360px;
+  text-align: center;
+}
+
+.auth-card h1 {
+  color: #2952e3;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.auth-card p.subtitle {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #d7dae0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #2952e3;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #2952e3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1e3ebd;
+}
+
+.btn-primary:disabled {
+  background: #9aa8ea;
+  cursor: not-allowed;
+}
+
+.auth-switch {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-switch a {
+  color: #2952e3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.error-text {
+  color: #d33;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Dashboard ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: #fff;
+  border-bottom: 1px solid #e6e8ee;
+}
+
+.topbar h1 {
+  color: #2952e3;
+  font-size: 22px;
+  margin: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #2952e3;
+  color: #2952e3;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.board {
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  min-width: 280px;
+}
+
+.column-header {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6e8ee;
+  margin-bottom: 14px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #e6e8ee;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.task-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.task-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.task-desc {
+  color: #666;
+  font-size: 13px;
+  margin: 8px 0 10px;
+}
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.priority-low {
+  background: #e3f6e9;
+  color: #1e9a4d;
+}
+
+.priority-medium {
+  background: #fff4d6;
+  color: #b8860b;
+}
+
+.priority-high {
+  background: #fde3e3;
+  color: #d33;
+}
+
+.task-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.task-card-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #2952e3;
+  font-weight: 600;
+  padding: 0;
+}
+
+.task-card-actions button.delete {
+  color: #d33;
+}
+
+.empty-column {
+  color: #999;
+  font-size: 13px;
+  padding: 12px 0;
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 30px;
+  width: 420px;
+  max-width: 90vw;
+}
+
+.modal-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.modal-box input,
+.modal-box select,
+.modal-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d7dae0;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  font-family: inherit;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-row > div {
+  flex: 1;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.modal-actions .btn-primary,
+.modal-actions .btn-outline {
+  flex: 1;
+}
+
+.loading-text,
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+}
